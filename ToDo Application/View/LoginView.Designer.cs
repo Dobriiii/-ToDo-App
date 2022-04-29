@@ -30,87 +30,178 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.RegisterButton = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblClear = new System.Windows.Forms.Label();
+            this.lblExit = new System.Windows.Forms.Label();
+            this.lblGoToReg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // UsernameTextBox
+            // txtUsername
             // 
-            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(275, 135);
-            this.UsernameTextBox.Multiline = true;
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(199, 30);
-            this.UsernameTextBox.TabIndex = 2;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(111, 133);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(236, 25);
+            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // lblLogin
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(337, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Log In";
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Showcard Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblLogin.Location = new System.Drawing.Point(153, 21);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(194, 64);
+            this.lblLogin.TabIndex = 3;
+            this.lblLogin.Text = "Log In";
             // 
-            // PasswordTextBox
+            // lblUsername
             // 
-            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(275, 202);
-            this.PasswordTextBox.Multiline = true;
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(199, 30);
-            this.PasswordTextBox.TabIndex = 4;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblUsername.Location = new System.Drawing.Point(175, 85);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(110, 35);
+            this.lblUsername.TabIndex = 5;
+            this.lblUsername.Text = "USER";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // btnLogin
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(338, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 14);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Username";
+            this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.Location = new System.Drawing.Point(162, 310);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(152, 35);
+            this.btnLogin.TabIndex = 7;
+            this.btnLogin.Text = "LOG IN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // label3
+            // panel1
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 14);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Password";
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Location = new System.Drawing.Point(111, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(236, 1);
+            this.panel1.TabIndex = 8;
             // 
-            // RegisterButton
+            // panel2
             // 
-            this.RegisterButton.Location = new System.Drawing.Point(333, 289);
-            this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(75, 23);
-            this.RegisterButton.TabIndex = 7;
-            this.RegisterButton.Text = "Log In";
-            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Location = new System.Drawing.Point(111, 260);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(236, 1);
+            this.panel2.TabIndex = 11;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassword.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblPassword.Location = new System.Drawing.Point(150, 185);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(170, 35);
+            this.lblPassword.TabIndex = 10;
+            this.lblPassword.Text = "Password";
+            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(111, 228);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(236, 25);
+            this.txtPassword.TabIndex = 9;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblClear
+            // 
+            this.lblClear.AutoSize = true;
+            this.lblClear.BackColor = System.Drawing.Color.Transparent;
+            this.lblClear.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClear.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblClear.Location = new System.Drawing.Point(308, 279);
+            this.lblClear.Name = "lblClear";
+            this.lblClear.Size = new System.Drawing.Size(47, 17);
+            this.lblClear.TabIndex = 12;
+            this.lblClear.Text = "Clear";
+            this.lblClear.Click += new System.EventHandler(this.lblClear_Click);
+            // 
+            // lblExit
+            // 
+            this.lblExit.BackColor = System.Drawing.Color.Transparent;
+            this.lblExit.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblExit.Location = new System.Drawing.Point(208, 363);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(57, 17);
+            this.lblExit.TabIndex = 13;
+            this.lblExit.Text = "Exit";
+            this.lblExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
+            // 
+            // lblGoToReg
+            // 
+            this.lblGoToReg.BackColor = System.Drawing.Color.Transparent;
+            this.lblGoToReg.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGoToReg.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblGoToReg.Location = new System.Drawing.Point(97, 279);
+            this.lblGoToReg.Name = "lblGoToReg";
+            this.lblGoToReg.Size = new System.Drawing.Size(89, 17);
+            this.lblGoToReg.TabIndex = 14;
+            this.lblGoToReg.Text = "Register";
+            this.lblGoToReg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGoToReg.Click += new System.EventHandler(this.lblGoToReg_Click);
             // 
             // LoginView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.RegisterButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.UsernameTextBox);
+            this.BackgroundImage = global::ToDo_Application.Properties.Resources.LogInViewBackground;
+            this.ClientSize = new System.Drawing.Size(451, 408);
+            this.Controls.Add(this.lblGoToReg);
+            this.Controls.Add(this.lblExit);
+            this.Controls.Add(this.lblClear);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.txtUsername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginView";
-            this.Text = "LoginView";
-            this.Load += new System.EventHandler(this.LoginView_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,11 +210,16 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox UsernameTextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox PasswordTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button RegisterButton;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblClear;
+        private System.Windows.Forms.Label lblExit;
+        private System.Windows.Forms.Label lblGoToReg;
     }
 }

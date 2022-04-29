@@ -28,40 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MainViewHeadText = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.ProgBarLoad = new System.Windows.Forms.ProgressBar();
+            this.TimerProgBar = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // MainViewHeadText
+            // ProgBarLoad
             // 
-            this.MainViewHeadText.BackColor = System.Drawing.SystemColors.Control;
-            this.MainViewHeadText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MainViewHeadText.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainViewHeadText.ForeColor = System.Drawing.Color.Black;
-            this.MainViewHeadText.Location = new System.Drawing.Point(245, 50);
-            this.MainViewHeadText.Multiline = true;
-            this.MainViewHeadText.Name = "MainViewHeadText";
-            this.MainViewHeadText.Size = new System.Drawing.Size(260, 122);
-            this.MainViewHeadText.TabIndex = 0;
-            this.MainViewHeadText.Text = "WELCOME TO TODO APP";
-            this.MainViewHeadText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MainViewHeadText.TextChanged += new System.EventHandler(this.MainViewHeadText_TextChanged);
+            this.ProgBarLoad.BackColor = System.Drawing.Color.DarkOrchid;
+            this.ProgBarLoad.ForeColor = System.Drawing.Color.White;
+            this.ProgBarLoad.Location = new System.Drawing.Point(99, 372);
+            this.ProgBarLoad.Name = "ProgBarLoad";
+            this.ProgBarLoad.Size = new System.Drawing.Size(542, 14);
+            this.ProgBarLoad.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.ProgBarLoad.TabIndex = 0;
+            // 
+            // TimerProgBar
+            // 
+            this.TimerProgBar.Enabled = true;
+            this.TimerProgBar.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ToDo_Application.Properties.Resources.BackgroundImage;
+            this.BackgroundImage = global::ToDo_Application.Properties.Resources.Splash_screen1_jpg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.MainViewHeadText);
+            this.ClientSize = new System.Drawing.Size(745, 417);
+            this.Controls.Add(this.ProgBarLoad);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox MainViewHeadText;
+        private System.Windows.Forms.ProgressBar ProgBarLoad;
+        private System.Windows.Forms.Timer TimerProgBar;
     }
 }
