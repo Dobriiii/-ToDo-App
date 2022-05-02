@@ -21,5 +21,18 @@ namespace ToDo_Application.View
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimerProgBar.Enabled = true;
+            ProgBarLoad.Increment(2);
+            if (ProgBarLoad.Value == 100)
+            {
+                TimerProgBar.Enabled = false;
+                LoginView loginView = new LoginView();
+                loginView.Show();
+                this.Hide();
+            }
+        }
     }
 }

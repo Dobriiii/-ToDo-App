@@ -16,5 +16,25 @@ namespace ToDo_Application.View
         {
             InitializeComponent();
         }
+
+        private void lblClear_Click(object sender, EventArgs e)
+        {
+            txtRegUsername.Clear();
+            txtRegPass.Clear();
+            txtConfirmPass.Clear();
+            txtRegUsername.Focus();
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblGoToLogIn_Click(object sender, EventArgs e)
+        {
+            LoginView loginView = new LoginView();
+            loginView.Show();
+            this.Hide();
+        }
     }
 }

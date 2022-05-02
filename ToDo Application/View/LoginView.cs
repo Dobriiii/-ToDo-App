@@ -17,9 +17,38 @@ namespace ToDo_Application.View
             InitializeComponent();
         }
 
-        private void LoginView_Load(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (true)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("Incorrect User name or password!");
+                txtUsername.Clear();
+                txtPassword.Clear();
+                txtUsername.Focus();
+            }
+        }
+
+        private void lblClear_Click(object sender, EventArgs e)
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+            txtUsername.Focus();
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblGoToReg_Click(object sender, EventArgs e)
+        {
+            RegisterView registerView = new RegisterView();
+            registerView.Show();
+            this.Hide();
         }
     }
 }
