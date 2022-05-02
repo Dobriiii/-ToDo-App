@@ -63,9 +63,9 @@ namespace ToDo_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BackgroundImage {
+        internal static System.Drawing.Bitmap InAppBackround {
             get {
-                object obj = ResourceManager.GetObject("BackgroundImage", resourceCulture);
+                object obj = ResourceManager.GetObject("InAppBackround", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,49 @@ namespace ToDo_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Splash_screen1_jpg {
+        internal static System.Drawing.Bitmap SplashScreen {
             get {
-                object obj = ResourceManager.GetObject("Splash screen1.jpg", resourceCulture);
+                object obj = ResourceManager.GetObject("SplashScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Splashscreen_png {
+            get {
+                object obj = ResourceManager.GetObject("Splashscreen.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SplashScreen1 {
+            get {
+                object obj = ResourceManager.GetObject("SplashScreen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ViewBackground {
+            get {
+                object obj = ResourceManager.GetObject("ViewBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ViewBackground1 {
+            get {
+                object obj = ResourceManager.GetObject("ViewBackground1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

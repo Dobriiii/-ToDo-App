@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -63,6 +63,17 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\InAppView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InAppView.Designer.cs">
+      <DependentUpon>InAppView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,14 +94,12 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="View\InAppView.resx">
+      <DependentUpon>InAppView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,13 +128,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\SplashScreen.png" />
+    <None Include="Images\InAppBackround.jpg" />
     <Content Include="Images\ViewBackground.jpg" />
-    <Content Include="ToDoDB.mdf">
+    <Content Include="ToDoUserDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ToDoDB_log.ldf">
+    <Content Include="ToDoUserDB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ToDoDB.mdf</DependentUpon>
+      <DependentUpon>ToDoUserDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

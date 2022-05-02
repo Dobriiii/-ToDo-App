@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtRegUsername = new System.Windows.Forms.TextBox();
-            this.lblLogin = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -54,6 +54,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 11;
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Showcard Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblLogin.Location = new System.Drawing.Point(21, -32);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(194, 64);
+            this.lblLogin.TabIndex = 4;
+            this.lblLogin.Text = "Log In";
             // 
             // lblUsername
             // 
@@ -79,18 +91,6 @@
             this.txtRegUsername.Size = new System.Drawing.Size(236, 25);
             this.txtRegUsername.TabIndex = 9;
             this.txtRegUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogin.Font = new System.Drawing.Font("Showcard Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblLogin.Location = new System.Drawing.Point(21, -32);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(194, 64);
-            this.lblLogin.TabIndex = 4;
-            this.lblLogin.Text = "Log In";
             // 
             // lblRegister
             // 
@@ -174,7 +174,7 @@
             // btnReg
             // 
             this.btnReg.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReg.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReg.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReg.Location = new System.Drawing.Point(153, 454);
@@ -245,7 +245,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.txtRegUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);

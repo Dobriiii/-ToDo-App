@@ -52,7 +52,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ToDo_Application.Properties.Resources.Splash_screen1_jpg;
+            this.BackgroundImage = global::ToDo_Application.Properties.Resources.SplashScreen1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(745, 417);
             this.Controls.Add(this.ProgBarLoad);
