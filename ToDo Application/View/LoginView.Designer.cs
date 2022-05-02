@@ -89,7 +89,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogin.Location = new System.Drawing.Point(162, 310);
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ToDo_Application.Properties.Resources.LogInViewBackground;
+            this.BackgroundImage = global::ToDo_Application.Properties.Resources.ViewBackground1;
             this.ClientSize = new System.Drawing.Size(451, 408);
             this.Controls.Add(this.lblGoToReg);
             this.Controls.Add(this.lblExit);
