@@ -43,6 +43,12 @@
             this.lblClear = new System.Windows.Forms.Label();
             this.lblExit = new System.Windows.Forms.Label();
             this.lblGoToLogIn = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblFirstname = new System.Windows.Forms.Label();
+            this.txtFirstname = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.txtLastname = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,7 +114,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(110, 285);
+            this.panel2.Location = new System.Drawing.Point(110, 502);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 15;
@@ -118,7 +124,7 @@
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblPassword.Location = new System.Drawing.Point(149, 210);
+            this.lblPassword.Location = new System.Drawing.Point(149, 427);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(170, 35);
@@ -130,7 +136,7 @@
             // 
             this.txtRegPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRegPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegPass.Location = new System.Drawing.Point(110, 253);
+            this.txtRegPass.Location = new System.Drawing.Point(110, 470);
             this.txtRegPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegPass.Multiline = true;
             this.txtRegPass.Name = "txtRegPass";
@@ -141,7 +147,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Location = new System.Drawing.Point(110, 398);
+            this.panel3.Location = new System.Drawing.Point(110, 615);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 14;
@@ -151,7 +157,7 @@
             this.lblConfirmPass.BackColor = System.Drawing.Color.Transparent;
             this.lblConfirmPass.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPass.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblConfirmPass.Location = new System.Drawing.Point(149, 301);
+            this.lblConfirmPass.Location = new System.Drawing.Point(149, 518);
             this.lblConfirmPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConfirmPass.Name = "lblConfirmPass";
             this.lblConfirmPass.Size = new System.Drawing.Size(170, 61);
@@ -163,7 +169,7 @@
             // 
             this.txtConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPass.Location = new System.Drawing.Point(110, 366);
+            this.txtConfirmPass.Location = new System.Drawing.Point(110, 583);
             this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmPass.Multiline = true;
             this.txtConfirmPass.Name = "txtConfirmPass";
@@ -177,13 +183,14 @@
             this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReg.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReg.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReg.Location = new System.Drawing.Point(153, 454);
+            this.btnReg.Location = new System.Drawing.Point(153, 671);
             this.btnReg.Margin = new System.Windows.Forms.Padding(4);
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(166, 35);
             this.btnReg.TabIndex = 16;
             this.btnReg.Text = "REGISTER";
             this.btnReg.UseVisualStyleBackColor = false;
+            this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
             // 
             // lblClear
             // 
@@ -191,7 +198,7 @@
             this.lblClear.BackColor = System.Drawing.Color.Transparent;
             this.lblClear.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClear.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblClear.Location = new System.Drawing.Point(299, 420);
+            this.lblClear.Location = new System.Drawing.Point(299, 637);
             this.lblClear.Name = "lblClear";
             this.lblClear.Size = new System.Drawing.Size(47, 17);
             this.lblClear.TabIndex = 17;
@@ -203,7 +210,7 @@
             this.lblExit.BackColor = System.Drawing.Color.Transparent;
             this.lblExit.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblExit.Location = new System.Drawing.Point(153, 493);
+            this.lblExit.Location = new System.Drawing.Point(153, 730);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(166, 25);
             this.lblExit.TabIndex = 18;
@@ -216,7 +223,7 @@
             this.lblGoToLogIn.BackColor = System.Drawing.Color.Transparent;
             this.lblGoToLogIn.Font = new System.Drawing.Font("Showcard Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGoToLogIn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblGoToLogIn.Location = new System.Drawing.Point(88, 420);
+            this.lblGoToLogIn.Location = new System.Drawing.Point(88, 637);
             this.lblGoToLogIn.Name = "lblGoToLogIn";
             this.lblGoToLogIn.Size = new System.Drawing.Size(89, 17);
             this.lblGoToLogIn.TabIndex = 19;
@@ -224,13 +231,85 @@
             this.lblGoToLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblGoToLogIn.Click += new System.EventHandler(this.lblGoToLogIn_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Location = new System.Drawing.Point(110, 292);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(236, 1);
+            this.panel4.TabIndex = 18;
+            // 
+            // lblFirstname
+            // 
+            this.lblFirstname.BackColor = System.Drawing.Color.Transparent;
+            this.lblFirstname.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstname.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblFirstname.Location = new System.Drawing.Point(149, 209);
+            this.lblFirstname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFirstname.Name = "lblFirstname";
+            this.lblFirstname.Size = new System.Drawing.Size(170, 35);
+            this.lblFirstname.TabIndex = 17;
+            this.lblFirstname.Text = "Firstname";
+            this.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Location = new System.Drawing.Point(110, 260);
+            this.txtFirstname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstname.Multiline = true;
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(236, 25);
+            this.txtFirstname.TabIndex = 16;
+            this.txtFirstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel5.Location = new System.Drawing.Point(110, 398);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(236, 1);
+            this.panel5.TabIndex = 22;
+            // 
+            // lblLastname
+            // 
+            this.lblLastname.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastname.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastname.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblLastname.Location = new System.Drawing.Point(149, 312);
+            this.lblLastname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(170, 35);
+            this.lblLastname.TabIndex = 21;
+            this.lblLastname.Text = "Lastname";
+            this.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.Location = new System.Drawing.Point(110, 366);
+            this.txtLastname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastname.Multiline = true;
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(236, 25);
+            this.txtLastname.TabIndex = 20;
+            this.txtLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // RegisterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ToDo_Application.Properties.Resources.LogInViewBackground;
-            this.ClientSize = new System.Drawing.Size(451, 573);
+            this.ClientSize = new System.Drawing.Size(451, 777);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.lblLastname);
+            this.Controls.Add(this.txtLastname);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.lblGoToLogIn);
+            this.Controls.Add(this.lblFirstname);
+            this.Controls.Add(this.txtFirstname);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblClear);
             this.Controls.Add(this.btnReg);
@@ -270,5 +349,11 @@
         private System.Windows.Forms.Label lblClear;
         private System.Windows.Forms.Label lblExit;
         private System.Windows.Forms.Label lblGoToLogIn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblFirstname;
+        private System.Windows.Forms.TextBox txtFirstname;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblLastname;
+        private System.Windows.Forms.TextBox txtLastname;
     }
 }
