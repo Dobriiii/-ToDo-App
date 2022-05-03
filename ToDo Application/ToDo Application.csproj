@@ -127,16 +127,16 @@
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ToDoUserDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ToDoUserDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ToDoUserDb.mdf</DependentUpon>
+    </Content>
     <None Include="Images\SplashScreen.png" />
     <None Include="Images\InAppBackround.jpg" />
     <Content Include="Images\ViewBackground.jpg" />
-    <Content Include="ToDoUserDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ToDoUserDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ToDoUserDB.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
