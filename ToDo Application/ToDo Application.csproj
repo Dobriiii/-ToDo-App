@@ -127,12 +127,12 @@
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ToDoUserDb.mdf">
+    <Content Include="ToDoAppDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ToDoUserDb_log.ldf">
+    <Content Include="ToDoAppDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ToDoUserDb.mdf</DependentUpon>
+      <DependentUpon>ToDoAppDb.mdf</DependentUpon>
     </Content>
     <None Include="Images\SplashScreen.png" />
     <None Include="Images\InAppBackround.jpg" />
