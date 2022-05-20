@@ -13,7 +13,7 @@ namespace ToDo_Application.View
 {
     public partial class RegisterView : Form
     {
-        string connectionString = "";
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public RegisterView()
         {
             InitializeComponent();
