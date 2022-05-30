@@ -48,8 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,12 +70,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ShowTasksController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TaskTable.cs">
+      <DependentUpon>ToDoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoAppDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToDoAppDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToDoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToDoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToDoModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UserTable.cs">
+      <DependentUpon>ToDoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateTaskView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreateTaskView.Designer.cs">
+      <DependentUpon>CreateTaskView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\InAppView.cs">
       <SubType>Form</SubType>
@@ -97,6 +139,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\CreateTaskView.resx">
+      <DependentUpon>CreateTaskView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\InAppView.resx">
       <DependentUpon>InAppView.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +154,7 @@
     <EmbeddedResource Include="View\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,12 +164,29 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="ToDoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ToDoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ToDoAppDbDataSet.xsc">
+      <DependentUpon>ToDoAppDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ToDoAppDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ToDoAppDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ToDoAppDbDataSet.xss">
+      <DependentUpon>ToDoAppDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ToDoModel.edmx.diagram">
+      <DependentUpon>ToDoModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +196,16 @@
     <Content Include="ToDoAppDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ToDoAppDb.mdf</DependentUpon>
+    </Content>
+    <Content Include="ToDoModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ToDoModel.Context.cs</LastGenOutput>
+      <DependentUpon>ToDoModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="ToDoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ToDoModel.edmx</DependentUpon>
+      <LastGenOutput>ToDoModel.cs</LastGenOutput>
     </Content>
     <None Include="Images\SplashScreen.png" />
     <None Include="Images\InAppBackround.jpg" />
@@ -149,6 +222,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
