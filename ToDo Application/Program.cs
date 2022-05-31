@@ -18,6 +18,7 @@ namespace ToDo_Application
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new InAppView());
+            ///ZA TIQ PARI E60
         }
     }
 }
