@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToDo_Application.Controller;
 
 namespace ToDo_Application.View
 {
     public partial class RegisterView : Form
     {
-        string connectionString = "";
+        RegisterController registerController = new RegisterController();
         public RegisterView()
         {
             InitializeComponent();
@@ -41,19 +42,35 @@ namespace ToDo_Application.View
 
         private void btnReg_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            UserTable userTable = new UserTable();
+            if (txtRegUsername.Text == String.Empty)
             {
-                sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
-                sqlCmd.CommandType = CommandType.StoredProcedure;
-                sqlCmd.Parameters.AddWithValue("@Firstname", txtFirstname.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Lastname", txtLastname.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Username", txtRegUsername.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Password", txtRegPass.Text.Trim());
-                sqlCmd.ExecuteNonQuery();
-                MessageBox.Show("Registration is successfull");
-                
+                MessageBox.Show("Please fill the username!");
             }
+
+            else if (txtRegPass.Text != txtConfirmPass.Text)
+            {
+                MessageBox.Show("The password and confirm password are not the same!");
+            }
+
+            else if (txtRegPass.Text == String.Empty)
+            {
+                MessageBox.Show("Please fill the password!");
+            }
+
+            else
+            {
+                userTable.Username = txtRegUsername.Text;
+                userTable.Firstname = txtFirstname.Text;
+                userTable.Lastname = txtLastname.Text;
+                userTable.Password = txtRegPass.Text;
+                registerController.AddUser(userTable);
+                MessageBox.Show("User is registered");
+                LoginView loginView = new LoginView();
+                this.Hide();
+                loginView.Show();               
+            }
+
         }
         void Clear()
         {
