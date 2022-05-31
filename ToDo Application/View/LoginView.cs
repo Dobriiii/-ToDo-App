@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToDo_Application.Controller;
 
 namespace ToDo_Application.View
 {
     public partial class LoginView : Form
     {
+        LoginController loginController = new LoginController();
         public LoginView()
         {
             InitializeComponent();
@@ -19,16 +21,16 @@ namespace ToDo_Application.View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (true)
+            var message = loginController.ShowMessage(txtUsername.Text, txtPassword.Text);
+            if (message != null)
             {
-
+                MessageBox.Show(message);
             }
             else
             {
-                MessageBox.Show("Incorrect User name or password!");
-                txtUsername.Clear();
-                txtPassword.Clear();
-                txtUsername.Focus();
+                InAppView inAppView = new InAppView();
+                this.Hide();
+                inAppView.Show();
             }
         }
 

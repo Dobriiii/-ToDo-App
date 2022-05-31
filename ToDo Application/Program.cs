@@ -17,7 +17,7 @@ namespace ToDo_Application
         {
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InAppView());
+            Application.Run(new LoginView());
         }
     }
 }
