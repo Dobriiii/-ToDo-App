@@ -69,5 +69,17 @@ namespace ToDo_Application.View
             showTasksController.DeleteTask(id);
             RefreshTable();
         }
+
+        private void btnShare_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUMV_Click(object sender, EventArgs e)
+        {
+            UserManagementView umv = new UserManagementView();
+            umv.Show();
+            this.Hide();
+        }
     }
 }
