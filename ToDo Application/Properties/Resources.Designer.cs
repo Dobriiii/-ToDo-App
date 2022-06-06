@@ -73,6 +73,16 @@ namespace ToDo_Application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap InAppBackround1 {
+            get {
+                object obj = ResourceManager.GetObject("InAppBackround1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogInViewBackground {
             get {
                 object obj = ResourceManager.GetObject("LogInViewBackground", resourceCulture);
