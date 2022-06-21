@@ -47,6 +47,7 @@
             this.dtpTsk = new System.Windows.Forms.DateTimePicker();
             this.lblTask = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
+            this.btnUMV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ToDoDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskTableBindingSource)).BeginInit();
@@ -143,6 +144,7 @@
             this.btnShare.TabIndex = 12;
             this.btnShare.Text = "Share";
             this.btnShare.UseVisualStyleBackColor = false;
+            this.btnShare.Click += new System.EventHandler(this.btnShare_Click);
             // 
             // dgvTask
             // 
@@ -244,6 +246,20 @@
             this.lblDate.Text = "Date";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnUMV
+            // 
+            this.btnUMV.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUMV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUMV.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUMV.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnUMV.Location = new System.Drawing.Point(12, 12);
+            this.btnUMV.Name = "btnUMV";
+            this.btnUMV.Size = new System.Drawing.Size(111, 37);
+            this.btnUMV.TabIndex = 18;
+            this.btnUMV.Text = "UMV";
+            this.btnUMV.UseVisualStyleBackColor = false;
+            this.btnUMV.Click += new System.EventHandler(this.btnUMV_Click);
+            // 
             // InAppView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,6 +267,7 @@
             this.BackgroundImage = global::ToDo_Application.Properties.Resources.InAppBackround;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(975, 587);
+            this.Controls.Add(this.btnUMV);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTask);
             this.Controls.Add(this.dtpTsk);
@@ -297,5 +314,6 @@
         private System.Windows.Forms.DateTimePicker dtpTsk;
         private System.Windows.Forms.Label lblTask;
         private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Button btnUMV;
     }
 }
